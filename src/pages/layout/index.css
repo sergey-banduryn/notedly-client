@@ -1,0 +1,18 @@
+header {
+  height: 40px;
+}
+.layout {
+  display: flex;
+}
+nav {
+  width: 30%;
+}
+nav a {
+  display: block;
+  height: 40px;
+  background-color: seagreen;
+  margin: 1em;
+}
+main {
+  width: 70%;
+}

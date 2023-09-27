@@ -1,0 +1,25 @@
+.page {
+	display: inline-block;
+	line-height: 1em;
+	padding: 1em;
+	text-decoration: none;
+	cursor: pointer;
+	color: black;
+}
+
+.page:hover {
+	color: #9b51e0;
+}
+
+.page span {
+	display: inline-block;
+	line-height: 1em;
+	height: 1em;
+	width: 1em;
+	text-align: center;
+}
+
+.curr-page {
+	background-color: #f5f6f7;
+	border-radius: 0.5em;
+}

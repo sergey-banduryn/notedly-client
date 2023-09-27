@@ -1,0 +1,7 @@
+.notes__wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.note {
+  margin: 1em;
+}
