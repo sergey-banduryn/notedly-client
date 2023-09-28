@@ -1,0 +1,14 @@
+name:  Echo
+
+on:
+  workflow_dispatch:
+
+  watch:
+    types: [started]
+jobs:
+
+print-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print the input tag to STDOUT
+        run: echo  The tags are 
