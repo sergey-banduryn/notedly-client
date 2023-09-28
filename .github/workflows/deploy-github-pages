@@ -5,8 +5,10 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ['main']
-  workflow_dispatch
-watch:
+
+  workflow_dispatch:
+
+  watch:
     types: [started]
 
   # Allows you to run this workflow manually from the Actions tab
