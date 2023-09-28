@@ -7,7 +7,7 @@ on:
     types: [started]
 jobs:
 
-print-tag:
+my-job:
     runs-on: ubuntu-latest
     steps:
       - name: Print the input tag to STDOUT
