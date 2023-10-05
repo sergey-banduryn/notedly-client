@@ -123,7 +123,7 @@ function ProtectedRoute() {
 export default function App() {
   return (
     <ApolloProvider client={client}>
-      <BrowserRouter basename="/sergeybanduryn.github.io/notedly-client">
+      <BrowserRouter basename="sergeybanduryn.github.io/notedly-client/">
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
