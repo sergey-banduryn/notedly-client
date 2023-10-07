@@ -32,9 +32,15 @@ import EditNote from "./pages/editNote";
 
 export const isLoggedInVar = makeVar(!!localStorage.getItem("notedlyToken"));
 
+console.log(import.meta.env.VITE_API_URI_DEV);
+
+// let uri_vite;
+// if (import.meta.env.DEV) uri_vite = import.meta.env.VITE_API_URI_DEV;
+// else uri_vite = import.meta.env.VITE_API_URI_PROD;
+
 let uri_vite;
-if (import.meta.env.DEV) uri_vite = import.meta.env.VITE_API_URI_DEV;
-else uri_vite = import.meta.env.VITE_API_URI_PROD;
+if (import.meta.env.DEV) uri_vite = "http://localhost:4000";
+else uri_vite = "https://notedlyserver-sergeyb89.b4a.run";
 
 const uri = uri_vite;
 
@@ -123,7 +129,7 @@ function ProtectedRoute() {
 export default function App() {
   return (
     <ApolloProvider client={client}>
-      <BrowserRouter basename="sergeybanduryn.github.io/notedly-client/">
+      <BrowserRouter basename={import.meta.env.DEV ? "/" : "/notedly-client/"}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
