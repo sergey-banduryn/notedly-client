@@ -131,7 +131,7 @@ export default function App() {
   return (
     <ApolloProvider client={client}>
       {/*<BrowserRouter basename={import.meta.env.DEV ? "/" : "/notedly-client/"}>*/}
-      <HashRouter basename={import.meta.env.DEV ? "/" : "/notedly-client/"}>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
