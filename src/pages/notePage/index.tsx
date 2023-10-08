@@ -56,7 +56,7 @@ export default function NotePage() {
 
   return (
     <>
-      {dataUser?.me.id === dataNote?.note.author.id && (
+      {dataUser && dataNote && dataUser?.me.id === dataNote?.note.author.id && (
         <>
           <Link to={`/edit/${dataNote?.note.id}`}>Edit</Link>
           <button onClick={deleteHandler}>Delete</button>

@@ -1,5 +1,6 @@
 import {
   BrowserRouter,
+  HashRouter,
   Navigate,
   Outlet,
   Route,
@@ -129,7 +130,8 @@ function ProtectedRoute() {
 export default function App() {
   return (
     <ApolloProvider client={client}>
-      <BrowserRouter basename={import.meta.env.DEV ? "/" : "/notedly-client/"}>
+      {/*<BrowserRouter basename={import.meta.env.DEV ? "/" : "/notedly-client/"}>*/}
+      <HashRouter basename={import.meta.env.DEV ? "/" : "/notedly-client/"}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -145,7 +147,8 @@ export default function App() {
             </Route>
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
+      {/*</BrowserRouter>*/}
     </ApolloProvider>
   );
 }
