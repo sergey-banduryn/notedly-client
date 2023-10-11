@@ -14,9 +14,10 @@ export default function SignUp() {
   const [values, setValues] = useState({});
   let navigate = useNavigate();
 
-  const [signUp, { data, loading, error }] = useMutation(SIGNUP_USER, {
+  const [signUp, { data, loading, error, client }] = useMutation(SIGNUP_USER, {
     onCompleted: (data) => {
       // console.log(data.signUp)
+      client.resetStore();
       localStorage.setItem("notedlyToken", data.signUp);
       isLoggedInVar(true);
       navigate("/");

@@ -56,7 +56,7 @@ export default function NotePage() {
 
   return (
     <>
-      {dataUser && dataNote && dataUser?.me.id === dataNote?.note.author.id && (
+      {dataUser && dataNote && dataUser.me?.id === dataNote.note.author.id && (
         <>
           <Link to={`/edit/${dataNote?.note.id}`}>Edit</Link>
           <button onClick={deleteHandler}>Delete</button>
@@ -64,7 +64,7 @@ export default function NotePage() {
       )}
       <div>{dataNote?.note.content}</div>
 
-      {dataUser && dataNote && (
+      {dataUser && dataNote && dataUser.me && (
         <FavoriteNote user={dataUser.me} note={dataNote.note} />
       )}
     </>

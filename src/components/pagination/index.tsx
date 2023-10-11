@@ -25,8 +25,6 @@ export default function Pagination({ total }) {
 		let url = new URL(location.href);
 		if (page === 1) url.searchParams.delete("page");
 		else url.searchParams.set("page", page);
-
-		// return url.pathname + url.search;
 		return url.search;
 	}
 	return (
